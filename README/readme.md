@@ -13,6 +13,8 @@ It began as a simple Excel sheet but is evolving into a structured, Python-power
 - Columns represent days or sessions; a value of `1` indicates attendance.
 - Data are updated manually for now and will later be loaded dynamically using Python (Pandas).
 
+<img width="250" alt="summary" src="/assets/images/summary.png" />
+<img width="250" alt="week" src="/assets/images/week.png" />
 ---
 
 ## Business Requirements
