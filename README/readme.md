@@ -3,7 +3,7 @@
 **Aretuzalog** is a personal data analytics project focused on tracking attendance, learning progress, and patterns of productivity during a data analytics bootcamp.  
 It began as a simple Excel sheet but is evolving into a structured, Python-powered dashboard designed to explore, analyse and visualise personal data in real time.
 
-![Aretuzalog Logo](assets/image/Logo).png
+![Aretuzalog Logo](assets/image/Logo.png)
 
 ---
 
