@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
+    <!-- Ustawienia kodowania znaków, żeby polskie litery działały poprawnie -->
     <meta charset="UTF-8" />
+    <!-- Strona będzie się poprawnie skalować na telefonach i tabletach -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Tytuł wyświetlany na karcie przeglądarki -->
+    <title>Aretuzalog • Daily Tracker</title>
+
+    <!-- Połączenie z zewnętrznym plikiem CSS, który odpowiada za wygląd strony -->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
-    <h1>Aretuzalog</h1>
-     <img src="assets/images/Logo.png" alt="Aretuzalog Logo" width="150" />
-    <h1>
-    <p>
-  <a href="README/readme.md" target="_blank" /a>
-</p>
-    <p>My attendance tracker</p> 
-  </h1>
-    </body>
+    <!-- GŁÓWNY POJEMNIK – otacza całą zawartość dashboardu -->
+    <div class="page-container">
+      
+      <!-- NAGŁÓWEK STRONY -->
+      <!-- Logo po lewej, tytuł i pasek daty po prawej -->
+      <header class="main-header">
+        <!-- Blok z logo aplikacji -->
+        <div class="logo-box">
+          <!-- Logo zapisane w folderze assets/images -->
+          <img src="assets/images/Logo.png" alt="Logo Aretuzalog" class="app-logo" />
+        </div>
+
+        <!-- Blok po prawej stronie – tytuł i pasek daty -->
+        <div class="header-right">
+          <!-- Tytuł aplikacji -->
+          <h1 class="app-title">Aretuzalog • Daily Tracker</h1>
+
+          <!-- Pasek z datą i dniami tygodnia -->
+          <div class="date-bar">
+            <!-- Pole wyboru daty -->
+            <div class="date-box">
+              <label for="day-date">Data:</label>
+              <input id="day-date" type="date" />
+            </div>
+
+            <!-- Skrótowe dni tygodnia -->
+            <div class="weekday-strip">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- GŁÓWNA CZĘŚĆ STRONY -->
+      <main class="dashboard">
+        
+        <!-- LEWA KOLUMNA – lista zajęć lub obecności -->
+       <section class="panel left">
+        <h2>Today's classes</h2>
+           <li><input type="checkbox" /> Stand up</li>
+           <li><input type="checkbox" /> Master class</li>
+           <li><input type="checkbox" /> Guided session</li>
+           <li><input type="checkbox" /> Stand Down</li>
+  <!-- Tutaj dodajemy wskaźnik na sam dół -->
+  <div class="attendance-box">
+    <p class="attendance-rate">Attendance: <span id="attendance-value">82%</span></p>
+    <p class="attendance-note">Required minimum: 80%</p>
+  </div>
+</section>
+
+
+        <!-- PRAWA KOLUMNA – zadania i notatki -->
+        <section class="panel-group right">
+          <div class="block">
+            <h3>Today's KPI from Data Analytics</h3>
+            <ul>
+              <li><input type="checkbox" /> Pandas Topic 14: Group By</li>
+              <li><input type="checkbox" /> Pandas Topic 15: Concatenate, Merge and Join</li>
+              <li><input type="checkbox" /> Pandas Topic 16: Pandas Data Visualisation Part 1A – Line Plot</li>
+              <li><input type="checkbox" /> Pandas Topic 16: Pandas Data Visualisation Part 1B – Histogram</li>
+              <li><input type="checkbox" /> ...</li>
+          </ul>
+          </div>
+
+          <div class="block">
+            <h3>Today's KPI from High Performance Behaviours</h3>
+            <ul>
+              <li><input type="checkbox" /> Stakeholder Management: Your Brand</li>
+              <li><input type="checkbox" /> ...</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h3>Not finished from previous days</h3>
+            <ul>
+              <li><input type="checkbox" /> ...</li>
+              <li><input type="checkbox" /> ...</li>
+            </ul>
+          </div>
+
+          <div class="block notes">
+            <h3>Notes</h3>
+            <textarea placeholder="Almost forgot to..."></textarea>
+          </div>
+        </section>
+      </main>
+
+      <!-- STOPKA STRONY -->
+      <footer>
+       <p>
+        Aretuzalog v0.2 • stworzone przez Karolinę |
+       <a href="/README/readme.md" target="_blank">README</a>
+       </p>
+      </footer>
+    </div>
+  </body>
 </html>
